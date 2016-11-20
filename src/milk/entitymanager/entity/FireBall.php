@@ -76,7 +76,7 @@ class FireBall extends Projectile{
 
 		if($this->age > 1200 or $this->isCollided){
 			if($this->isCollided and $this->canExplode){
-				$this->server->getPluginManager()->callEvent($ev = new ExplosionPrimeEvent($this, 2.8));
+				$this->server->getPluginManager()->callEvent($ev = new ExplosionPrimeEvent($this, 2.8, true));
 				if(!$ev->isCancelled()){
 					$explosion = new Explosion ( $this, $ev->getForce (), $this->shootingEntity );
 					//if($ev->isBlockBreaking())
