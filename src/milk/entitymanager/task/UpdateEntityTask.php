@@ -12,7 +12,7 @@ class UpdateEntityTask extends PluginTask{
         foreach(EntityManager::getEntities() as $entity){
             if($entity->isCreated()) $entity->updateTick();
             if($entity instanceof Animal && $entity->isOnFire()){
-                $entity->extinguish();
+                $entity->setDataFlag(self::DATA_FLAGS, self::DATA_FLAG_ONFIRE, false);
             }
         }
     }
