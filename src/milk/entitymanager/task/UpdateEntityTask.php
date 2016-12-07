@@ -2,7 +2,7 @@
 
 namespace milk\entitymanager\task;
 
-use milk\entitymanager\entity\Animal
+use milk\entitymanager\entity\Animal;
 use milk\entitymanager\EntityManager;
 use pocketmine\scheduler\PluginTask;
 
