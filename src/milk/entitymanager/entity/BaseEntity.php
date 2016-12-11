@@ -89,7 +89,7 @@ abstract class BaseEntity extends Creature{
         if(isset($this->namedtag->Movement)){
             $this->setMovement($this->namedtag["Movement"]);
         }
-        $this->dataProperties[self::DATA_FLAGS] = [self::DATA_NO_AI, true];
+        $this->dataProperties[self::DATA_FLAGS] = [self::DATA_FLAG_NO_AI, true];
         Entity::initEntity();
     }
 
